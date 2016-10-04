@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="referrer" content="never">
+	<meta name="description" content="国内最优秀的电影下载网站 免费，每天更新迅雷电影下载，搜集和分享高清影视的电影下载网站 免费，致力于构建最大的高清电影下载汇聚地，迅雷电影下载、免费电影下载尽在人间50高清电影下载网站 免费。">
+	<meta name="keywords" content="最新电影下载 电影下载网站 迅雷电影下载 ShadowSocks账号 ShadowSocks代理 ShadowSocks教程 ShadowSocks下载">
+	<meta content="rj50.pw" name="author">
+	<!--
+	<title>看视频不用等</title>
+	-->
+	<script src="https://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery-validate/1.15.0/jquery.validate.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery.transit/0.9.12/jquery.transit.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="./js/jqpagination.js"></script>
+	<script src="./js/main.js"></script>
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<link rel="bookmark" href="/favicon.ico"/>
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://cdn.bootcss.com/metro/3.0.15/css/metro.min.css" rel="stylesheet">
+	<link href="./css/jqpagination.css" rel="stylesheet">
+	<link href="./css/mainpage.css" rel="stylesheet">
+</head>
+<body>
+	<div id="nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+	   <div class="navbar-header">
+	      <button class="navbar-toggle" type="button" data-toggle="collapse" 
+	         data-target=".bs-js-navbar-scrollspy">
+	         <span class="sr-only">切换导航</span>
+	         <span class="icon-bar"></span>
+	         <span class="icon-bar"></span>
+	         <span class="icon-bar"></span>
+	      </button>
+	      <a id="nav-brand" class="navbar-brand" href="#">人间50，如梦似幻</a>
+	   </div>
+	   <div class="collapse navbar-collapse bs-js-navbar-scrollspy pull-right">
+	    	<ul class="nav navbar-nav">
+	    		<li class="active"><a id="nav-begin" href="#" data-toggle="tab"><i class="fa fa-th-large"></i> 首页</a></li>
+	    		<li><a id="nav-shadowsocks" href="#" data-toggle="tab"><i class="fa fa-paper-plane"></i> ShadowSocks</a></li>
+	    		<li><a id="nav-movie" href="#" data-toggle="tab"><i class="fa fa-film"></i> 最新院线影片</a></li>
+	    		<li><a id="nav-verycd" href="#" data-toggle="tab"><i class="fa fa-unlock-alt"></i> VeryCD下载</a></li>
+	    		<li><a id="nav-google" href="#" data-toggle="tab"><i class="fa fa-google"></i> Google镜像</a></li>
+	        	<li><a id="nav-bt" href="#" data-toggle="tab"><i class="fa fa-bus"></i> 老司机 BT</a></li>	
+	    	</ul>
+	   </div>
+	</div>
+	<div id="content" class="container">
+		<div id="content-begin" class="container">
+			<div class="row"></div>
+			<div class="row"></div>
+			<div class="row">
+			<div class="col-sm-offset-1 col-sm-10">
+				<div class="tile-container bg-grayLighter">
+					<div id="tile-movie" class="tile-wide fg-white my-tile" data-role="tile">
+		                <div class="tile-content">
+							<div class="image-container">
+								<div class="frame bg-lightGray">
+									<table width="100%" height="100%">
+				        			<tr><td align="center">
+					                	<h3><i class="fa fa-film"></i> 影片</h3>
+					                </td></tr>
+					                </table>
+								</div>
+								<div class="image-overlay bg-lighterGray fg-gray">
+									<table width="100%" height="100%">
+					        			<tr><td align="center">
+			                            <h3>提供最新影片迅雷下载</h3>
+			                            </td></tr>
+						            </table>
+		                        </div>
+							</div>
+		                </div>
+		            </div>
+		            <div id="tile-google" class="tile-wide fg-white my-tile" data-role="tile">
+		                <div class="tile-content">
+							<div class="image-container">
+								<div class="frame bg-lightGray">
+									<table width="100%" height="100%">
+				        			<tr><td align="center">
+					                	<h3><i class="fa fa-google"></i> Google镜像</h3>
+					                </td></tr>
+					                </table>
+								</div>
+								<div class="image-overlay bg-lighterGray fg-gray">
+									<table width="100%" height="100%">
+					        			<tr><td align="center">
+					        			<h3>轻松查找各种资料</h3>
+			                            <h4>无需安装任何VPN、代理、插件</h4>
+			                            </td></tr>
+						            </table>
+		                        </div>
+							</div>
+		                </div>
+		            </div>
+		            <div id="tile-verycd" class="tile-wide fg-white my-tile" data-role="tile">
+		            	<div class="tile-content">
+							<div class="image-container">
+								<div class="frame bg-lightGray">
+									<table width="100%" height="100%">
+				        			<tr><td align="center">
+					                	<h3><i class="fa fa-unlock-alt"></i> VeryCD</h3>
+					                </td></tr>
+					                </table>
+								</div>
+								<div class="image-overlay bg-lighterGray fg-gray">
+									<table width="100%" height="100%">
+					        			<tr><td align="center">
+										<h3>解锁VeryCD下载地址</h3>
+			                            </td></tr>
+						            </table>
+		                        </div>
+							</div>
+		                </div>
+		            </div>
+		            <div id="tile-bt" class="tile-wide fg-white my-tile" data-role="tile">
+		            	<div class="tile-content">
+							<div class="image-container">
+								<div class="frame bg-lightGray">
+									<table width="100%" height="100%">
+				        			<tr><td align="center">
+					                	<h3><i class="fa fa-bus"></i> 老司机 BT</h3>
+					                </td></tr>
+					                </table>
+								</div>
+								<div class="image-overlay bg-lighterGray fg-gray">
+									<table width="100%" height="100%">
+					        			<tr><td align="center">
+										<h3>番号、电影、音乐</h3>
+										<h3>无所不包、无所不有</h3>
+			                            </td></tr>
+						            </table>
+		                        </div>
+							</div>
+		                </div>
+		            </div>
+		            <div id="tile-shadowsocks" class="tile-wide fg-white my-tile" data-role="tile">
+		                <div class="tile-content">
+							<div class="image-container">
+								<div class="frame bg-lightGray">
+									<table width="100%" height="100%">
+				        			<tr><td align="center">
+					                	<h3><i class="fa fa-paper-plane"></i> 超快翻墙</h3>
+					                	<h3>价格优惠、超长试用</h3>
+					                </td></tr>
+					                </table>
+								</div>
+								<div class="image-overlay bg-lighterGray fg-gray">
+									<table width="100%" height="100%">
+					        			<tr><td align="center">
+			                            <h3>专门加速的SS代理服务</h3>
+		                            	<h3>最全Shadowsocks代理</h3>
+			                            </td></tr>
+						            </table>
+		                        </div>
+							</div>
+		                </div>
+		            </div>
+		            <div id="tile-youtube" class="tile-wide fg-white my-tile" data-role="tile">
+		            	<div class="tile-content">
+							<div class="image-container">
+								<div class="frame bg-lightGray">
+									<table width="100%" height="100%">
+				        			<tr><td align="center">
+					                	<h3><i class="fa fa-youtube-play"></i> YouTube</h3>
+					                </td></tr>
+					                </table>
+								</div>
+								<div class="image-overlay bg-lighterGray fg-gray">
+									<table width="100%" height="100%">
+					        			<tr><td align="center">
+										<h3>YouTube视频下载</h3>
+			                            </td></tr>
+						            </table>
+		                        </div>
+							</div>
+		                </div>
+		            </div>
+		            <!--
+		            <div class="tile-wide fg-white my-tile" data-role="tile">
+		            	<div class="tile-content">
+							<div class="image-container">
+								<div class="frame bg-lightGray">
+									<table width="100%" height="100%">
+				        			<tr>
+				        				<td align="center" class="myQRCode"><img src="./img/weichat.jpg"></td>
+					                	<td align="center">
+					                	<h4><i class="fa fa-gift"></i> 加入微信</h4>
+					                	<h4>liu742768</h4>
+					                	<h4>发送免费福利</h4>
+					                	<h4>结交四海兄弟</h4>
+					                	</td>
+				        			</tr>
+					                </table>
+								</div>
+							</div>
+		                </div>
+		            </div>
+		            -->
+            	</div>
+			</div>
+			</div>
+			<div class="row"></div>
+			<div class="row">
+				<div class="col-sm-offset-1 col-sm-10">
+				<p class="tips_info">诺小昭全集 http://pan.baidu.com/s/1kU5WqnP</p>
+				</div>
+			</div>
+		</div>
+		<div id="content-shadowsocks" class="container">
+		    <div class="row">
+		    <div class="col-sm-offset-1 col-sm-10">
+		    <table width="100%" height="100%">
+	        <tr><td align="center">
+				<div id="myCarousel" class="carousel slide">
+				   <ol class="carousel-indicators">
+				      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				      <li data-target="#myCarousel" data-slide-to="1"></li>
+				      <li data-target="#myCarousel" data-slide-to="2"></li>
+				   </ol>   
+				   <div class="carousel-inner">
+				      <div class="item active">
+				         <img src="./img/SS11.jpg" alt="First slide">
+				         <div class="carousel-caption">
+				         	<div class="milky">轻松畅游全网络，外边的世界更精彩！</div>
+				         </div>
+				      </div>
+				      <div class="item">
+				         <img src="./img/SS12.jpg" alt="Second slide">
+				         <div class="carousel-caption">
+				         	<div class="milky">采用双边加速技术，跑满带宽，老司机带您一起飞！</div>
+				         </div>
+				      </div>
+				      <div class="item">
+				         <img src="./img/SS13.jpg" alt="Third slide">
+				         <div class="carousel-caption">
+				         	<div class="milky">搭配proxifier，各种游戏随您开！</div>
+				         </div>
+				      </div>
+				   </div>
+
+				   <a class="carousel-control left" href="#myCarousel" 
+				      data-slide="prev">&lsaquo;</a>
+				   <a class="carousel-control right" href="#myCarousel" 
+				      data-slide="next">&rsaquo;</a>
+				</div>
+			</td></tr>
+			</table>
+			</div>
+			</div>
+			<div class="row ss-banner-noimg">
+				<div class="col-sm-offset-1 col-sm-10">
+				<p class="tips_info">轻松畅游全网络，外边的世界更精彩！</p>
+				</div>
+			</div>
+			<div class="row ss-banner-noimg">
+				<div class="col-sm-offset-1 col-sm-10">
+				<p class="tips_info">采用双边加速技术，跑满带宽，老司机带您一起飞！</p>
+				</div>
+			</div>
+			<div class="row ss-banner-noimg">
+				<div class="col-sm-offset-1 col-sm-10">
+				<p class="tips_info">搭配proxifier，各种游戏随您开！</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-offset-1 col-sm-10">
+				<p class="tips_info">流畅播放tumblr 91 草榴视频，不卡顿、一撸为快！！！</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-offset-1 col-sm-10">
+				<p class="tips_info">15元每月，不限流量，可以免费试用，客服QQ：3359432505</p>
+				</div>
+			</div>
+			<div id="row-3" class="row">
+		    </div>
+		    <div class="row">
+		    	<div class="col-sm-offset-1 col-sm-5">
+		    		<h2>
+		    			<i class="fa fa-windows windows_icon"></i>
+		    			<span class="guide_title">Windows系统</span>
+		    		</h2>
+		    		<ul class="guide_ul">
+		    			<li>
+		    			Windows XP/7/8/10 客户端下载：
+						<i class="fa fa-download download_icon"></i>
+						<a href="http://dl.pgssh.com/ShadowsocksR-win-3.6.4.1.7z" target="_blank">ShadowsocksR-win-3.6.4.1.7z</a>
+		    			</li>
+		    			<li>
+		    			查看官方（SourceForge）
+		    			<a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank">最新所有版本客户端</a>
+		    			</li>
+		    			<li>
+		    			<a href="windows-json.html" target="_blank"><i class="fa fa-file-text download_icon"></i>使用教程（json文件自动配置）</a>
+		    			</li>
+		    			<li>
+		    			<a href="windows-problem.html" target="_blank"><i class="fa fa-file-text download_icon"></i>常见问题解决方法</a>
+		    			</li>
+		    		</ul>
+		    	</div>
+		    	<div class="col-sm-offset-1 col-sm-5">
+		    		<h2>
+		    			<i class="fa fa-apple apple_icon"></i>
+		    			<span class="guide_title">MAC OS</span>
+		    		</h2>
+		    		<ul class="guide_ul">
+		    			<li>
+		    				MAC OS客户端下载：
+		    				<i class="fa fa-download download_icon"></i>
+		    				<a href="http://www.pgssh.com/dl/ShadowsocksX-2.6.3.dmg" target="_blank">ShadowsocksX-2.6.3.dmg</a>
+		    			</li>
+		    			<li>
+		    				查看官方（SourceForge）
+		    				<a href="http://sourceforge.net/projects/shadowsocksgui/files/dist/" target="_blank">最新所有版本客户端</a>
+		    			</li>
+		    			<li>
+		    				<a href="macos-guide.html" target="_blank">
+		    				<i class="fa fa-file-text download_icon"></i>
+		    				ShadowsocksX使用教程</a>
+		    			</li>
+		    		</ul>
+		    	</div>
+		    </div>
+		    <div class="row">
+		    	<div class="col-sm-offset-1 col-sm-5">
+		    		<h2>
+		    			<i class="fa fa-apple ios_icon"></i>
+		    			<span class="guide_title">iPhone,iPad</span>
+		    		</h2>
+		    		<ul class="guide_ul">
+						<li>
+						（未越狱）iPhone,iPad客户端下载：
+						<i class="fa fa-link download_icon"></i>
+						<a href="https://itunes.apple.com/cn/app/shadowrocket-for-shadowsocks/id932747118" target="_blank">Shadowrocket APP Store</a>
+						</li>
+						<li>
+						（已越狱）iPhone,iPad客户端下载：请直接在Cydia里搜索 Shadowsocks ，然后安装即可
+						</li>
+						<li>
+						<a href="ios-guide.html" target="_blank">
+						<i class="fa fa-file-text download_icon"></i>使用教程</a>
+						</li>
+					</ul>
+		    	</div>
+		    	<div class="col-sm-offset-1 col-sm-5">
+		    		<h2>
+		    		<i class="fa fa-android android_icon"></i>
+		    		<span class="guide_title">安卓Android系统</span>
+		    		</h2>
+		    		<ul class="guide_ul">
+						<li>
+						安卓客户端下载：
+						<i class="fa fa-download download_icon"></i>
+						<a href="http://www.pgssh.com/dl/shadowsocks-nightly-2.6.8.apk" target="_blank">shadowsocks-nightly-2.6.8.apk</a>
+						</li>
+						<li>
+						查看官方（Github）
+						<a href="https://github.com/shadowsocks/shadowsocks-android/releases" target="_blank">最新所有版本客户端</a>
+						</li>
+						<li>
+						<a href="android-guide.html" target="_blank">
+						<i class="fa fa-file-text download_icon"></i>手动设置教程</a> ， 
+						<a href="android-qrcode-guide.html" target="_blank">
+						<i class="fa fa-file-text download_icon"></i>二维码自动配置教程</a>
+						</li>
+					</ul>
+		    	</div>
+		    </div>
+		</div>
+		<div id="content-movie" class="container">
+			<div id="mov-row-1" class="row">
+				<div class="well well-sm">
+					<div class="container">
+						<div id="mov-nav-row-1" class="row">
+						<div class="col-sm-offset-1 col-sm-8">
+			            <ul class="nav nav-tabs">
+						   <li class="active tag-all"><a id="tag-tabs" href="#" data-toggle="tab">全部</a></li>
+						   <li class="tag-tabs"><a href="#" data-toggle="tab">爱情</a></li>
+						   <li class="tag-tabs"><a href="#" data-toggle="tab">喜剧</a></li>
+						   <li class="tag-tabs"><a href="#" data-toggle="tab">动作</a></li>
+						   <li class="tag-tabs"><a href="#" data-toggle="tab">科幻</a></li>
+						   <li class="tag-tabs"><a href="#" data-toggle="tab">恐怖</a></li>
+						   <li class="tag-tabs"><a href="#" data-toggle="tab">战争</a></li>
+						   <li class="tag-tabs"><a href="#" data-toggle="tab">剧情</a></li>
+						   <li class="tag-tabs"><a href="#" data-toggle="tab">冒险</a></li>
+						   <li class="tag-tabs"><a href="#" data-toggle="tab">悬疑</a></li>
+						   <li class="tag-tabs"><a href="#" data-toggle="tab">惊悚</a></li>
+						</ul>
+						</div>
+						<div class="col-sm-3">
+						<form role="form" id="form-search-mov" action="">
+			                <div id="search-bar-movie" class="form-group">
+			                    <div class="input-group center">
+			                        <input class="form-control" name="search" id="search-movie" placeholder="请输入关键字" value="" />
+			                        <span class="input-group-btn">
+				                  	<button id="btn-movie" type="submit" class="btn btn-primary">
+				                     搜索
+				                  	</button>
+               						</span>
+			                    </div>
+			                </div>
+			            </form>
+			            </div>
+						</div>
+					</div>
+	            </div>
+	        </div>
+            <div id="movie-spinner"  class="row">
+				<table width="100%" height="100%">
+	                <tr>
+	                    <td align="center">
+							<i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>
+							<span class="sr-only">Loading...</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="movie-404"  class="row">
+				<table width="100%" height="100%">
+	                <tr>
+	                    <td align="center">
+							<img src="./img/404.png"/>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="row row-1">
+	        <div id="content-movie-list">
+	        </div>
+	        </div>
+	        <div class="row row-1">
+	        	<table id="tb-pagination" width="100%" height="100%">
+	                <tr>
+	                    <td align="center">
+	                    	<div id="movie-pagination" class="gigantic pagination">
+								<a href="#" class="first" data-action="first">&laquo;</a>
+							    <a href="#" class="previous" data-action="previous">&lsaquo;</a>
+							    <input type="text" readonly="readonly" />
+							    <a href="#" class="next" data-action="next">&rsaquo;</a>
+							    <a href="#" class="last" data-action="last">&raquo;</a>
+							</div>
+						</td>
+					</tr>
+				</table>
+	        </div>
+		</div>
+		<div id="content-youtube" class="container">
+	      	<div class="row">
+	      		<div class="well well-sm row-1">
+      				<form role="form" id="form-youtube" action="">
+		                <div id="search-bar-youtube" class="form-group">
+		                    <div class="input-group center">
+		                    	<span class="input-group-addon">输入网址</span>
+		                        <input class="form-control" name="link" id="input-youtube" placeholder="请输入网址" value="" />
+		                        <span class="input-group-btn">
+			                  	<button id="btn-youtube" type="submit" class="btn btn-primary">
+			                     马上下载
+			                  	</button>
+           						</span>
+		                    </div>
+		                </div>
+		            </form>
+	            </div>
+	      	</div>
+	     	<div class="row row-2">
+	  			<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">视频文件每日清空，请及时下载</h3>
+					</div>
+					<div class="panel-body">
+						<div id="panel-container">
+				            <table width="100%" height="100%">
+				                <tr>
+				                    <td align="center">
+				                        <div id="panel-spinner">
+											<i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>
+											<span class="sr-only">Loading...</span>
+										</div>
+										<div id="panel-text">
+											<h4>
+											<p>输入youtube视频连接，点击按钮。</p>
+											<p>稍等片刻，视频下载地址就会出现。</p>
+											</h4>
+										</div>
+				                    </td>
+				                </tr>
+				            </table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="content-verycd" class="container">
+	      	<div class="row">
+	      		<div class="well well-sm row-1">
+      				<form role="form" id="form-verycd" action="">
+		                <div id="search-bar-verycd" class="form-group">
+		                    <div class="input-group center">
+		                    	<span class="input-group-addon">输入网址或关键字</span>
+		                        <input class="form-control" name="link" id="input-verycd" placeholder="请输入网址或关键字" value="" />
+		                        <span class="input-group-btn">
+			                  	<button id="btn-verycd" type="submit" class="btn btn-primary">搜索</button>
+           						</span>
+		                    </div>
+		                </div>
+		            </form>
+		            <div class="guide_title verycd_title">有效网址需要包含topics字样，例如: http://www.verycd.com/topics/227126/</div>
+	            </div>
+	      	</div>
+	     	<div class="row row-2">
+	  			<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title"><a href="http://www.verycd.com/" target="_blank">
+						<img src="./img/verycd.png"/></a></h3>
+					</div>
+					<div class="panel-body">
+						<div id="panel-verycd-container">
+				            <table width="100%" height="100%">
+				                <tr>
+				                    <td align="center">
+				                        <div id="panel-verycd-spinner">
+											<i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>
+											<span class="sr-only">Loading...</span>
+										</div>
+										<div id="panel-verycd-text">
+										</div>
+				                    </td>
+				                </tr>
+				            </table>
+						</div>
+					</div>
+					<div id="pannel-verycd-footer" class="panel-footer">
+						<table width="100%" height="100%">
+			                <tr>
+			                    <td align="center">
+			                    	<div id="verycd-pagination" class="gigantic pagination">
+										<a href="#" class="first" data-action="first">&laquo;</a>
+									    <a href="#" class="previous" data-action="previous">&lsaquo;</a>
+									    <input type="text" readonly="readonly" />
+									    <a href="#" class="next" data-action="next">&rsaquo;</a>
+									    <a href="#" class="last" data-action="last">&raquo;</a>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="content-google" class="container">
+			<div class="row">
+	      		<div class="well well-sm row-1">
+      				<form role="form" id="form-google" action="">
+		                <div id="search-bar-google" class="form-group">
+		                    <div class="input-group center">
+		                    	<div class="input-group-btn">
+		                    		<button id="btn-logo-google" type="button" class="btn btn-default dropdown-toggle" 
+		                    		 data-toggle="dropdown">
+										<img class="logo-google" src="./img/logo-google.gif"/>
+					                </button>
+					                <ul id="downlist-google" class="dropdown-menu pull-right downlist-google">
+					                    <li><a id="downlist-google-1" href="#"><img class="logo-google" src="./img/logo-google.gif"/></a></li>
+					                    <li><a id="downlist-google-2" href="#">网页快照</a></li>
+					                </ul>
+		                    	</div>
+		                        <input class="form-control" name="link" id="input-google" placeholder="输入搜索内容" value="" />
+		                        <span class="input-group-btn">
+			                  	<button id="btn-google" type="submit" class="btn btn-primary">搜索</button>
+           						</span>
+		                    </div>
+		                </div>
+		            </form>
+	            </div>
+	      	</div>
+	      	<div class="row"></div>
+	      	<div id="content-google-list">
+	        </div>
+	      	<div id="google-spinner"  class="row">
+				<table width="100%" height="100%">
+	                <tr>
+	                    <td align="center">
+							<i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>
+							<span class="sr-only">Loading...</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="google-pdfdownload"  class="row">
+			</div>
+		</div>
+		<div id="content-bt" class="container">
+			<div class="row">
+	      		<div class="well well-sm row-1">
+      				<form role="form" id="form-bt" action="">
+		                <div id="search-bar-bt" class="form-group">
+		                    <div class="input-group center">
+		                        <input class="form-control" name="link" id="input-bt" placeholder="番号、电影、音乐、应有尽有" value="" />
+		                        <span class="input-group-btn">
+			                  	<button id="btn-bt" type="submit" class="btn btn-primary">搜索</button>
+           						</span>
+		                    </div>
+		                </div>
+		            </form>
+	            </div>
+	      	</div>
+	      	<div class="row"></div>
+	      	<div id="content-bt-list" class="row-1">
+
+	        </div>
+	      	<div id="bt-spinner"  class="row">
+				<table width="100%" height="100%">
+	                <tr>
+	                    <td align="center">
+							<i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>
+							<span class="sr-only">Loading...</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="row"></div>
+			<div class="row row-1">
+	        	<table id="bt-pagination-tb" width="100%" height="100%">
+	                <tr>
+	                    <td align="center">
+	                    	<div id="bt-pagination" class="gigantic pagination">
+								<a href="#" class="first" data-action="first">&laquo;</a>
+							    <a href="#" class="previous" data-action="previous">&lsaquo;</a>
+							    <input type="text" readonly="readonly" />
+							    <a href="#" class="next" data-action="next">&rsaquo;</a>
+							    <a href="#" class="last" data-action="last">&raquo;</a>
+							</div>
+						</td>
+					</tr>
+				</table>
+	        </div>
+		</div>
+		<div id="row-3" class="row">
+		</div>
+      	<div class="row">
+      		<table width="100%" height="100%">
+				<tr>
+				    <td  id="row-last" align="center">
+      					Copyright &copy; 2016 人间50, All Rights Reserved.
+      				</td>
+				</tr>
+			</table>
+		</div>
+  	</div>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+	   aria-labelledby="myModalLabel" aria-hidden="true">
+	   <div class="modal-dialog">
+	      <div id="myModal-content" class="modal-content">
+	      		<table width="100%" height="100%">
+	                <tr>
+	                    <td align="center">
+							<i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>
+							<span class="sr-only">Loading...</span>
+						</td>
+					</tr>
+				</table>
+	      <!--
+	         <div class="modal-header">
+	            <button type="button" class="close" 
+	               data-dismiss="modal" aria-hidden="true">
+	                  &times;
+	            </button>
+	            <h4 class="modal-title" id="myModalLabel">
+	               模态框（Modal）标题
+	            </h4>
+	         </div>
+	         <div class="modal-body">
+	            在这里添加一些文本
+	         </div>
+	         <div class="modal-footer">
+	            <button type="button" class="btn btn-default" 
+	               data-dismiss="modal">关闭
+	            </button>
+	         </div>
+	      </div>
+	      -->
+		  </div>
+	  </div>
+	</div>
+	<div style="display: none">
+	<script language="javascript" type="text/javascript" src="./js/18898929.js"></script>
+<noscript><a href="http://www.51.la/?18898929" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/18898929.asp" style="border:none" /></a></noscript>
+	</div>
+</body>
+</html>
