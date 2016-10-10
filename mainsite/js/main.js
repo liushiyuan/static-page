@@ -82,7 +82,7 @@ $(document).ready(function(){
 		idsToggler("#content-youtube");
 	});
 	$("#nav-movie").click(function(){
-		$.get("api/movie/list/1", function(data){ doGetListResult(data, $(this)[0].url); });
+		//$.get("api/movie/list/1", function(data){ doGetListResult(data, $(this)[0].url); });
 		idsToggler("#content-movie");
 	});
 	$("#nav-shadowsocks").click(function(){
@@ -242,9 +242,9 @@ $(document).ready(function(){
     	}
     });
 
-    //$("#content-movie-list").ready(function(){
-    //	$.get("api/movie/list/1", function(data){ doGetListResult(data, $(this)[0].url); });
-    //});
+    $("#content-movie-list").ready(function(){
+    	$.get("api/movie/list/1", function(data){ doGetListResult(data, $(this)[0].url); });
+    });
     $("#myModal").on("hidden.bs.modal", function() {
     	$(this).removeData("bs.modal");
     	$("#myModal-content").html("<table width=\"100%\" height=\"100%\">\
