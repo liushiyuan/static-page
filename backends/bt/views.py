@@ -8,7 +8,7 @@ import json
 import os
 # Create your views here.
 
-DomainName = "www.btsousousou.com"
+DomainName = "www.btspider.net"
 
 @csrf_exempt
 def doPost(request):
@@ -18,12 +18,12 @@ def doPost(request):
         request_content = request_content.encode('utf-8')
         request_type = request.POST['type']
         if request_type == "search":
-            webURL = "http://%s/search/%s-first-asc-1.html" % (DomainName, request_content)
+            webURL = "http://%s/%s-first-asc-1" % (DomainName, request_content)
             result = doSearch(webURL)
         if request_type == "page":
             page = request.POST['pagenum']
             page =  page.encode('utf-8')
-            webURL = "http://%s/search/%s-first-asc-%s.html" % (DomainName, request_content, page)
+            webURL = "http://%s/%s-first-asc-%s" % (DomainName, request_content, page)
             result = doSearch(webURL)
         if request_type == "detail":
             result = doGetDetail(request_content)
@@ -39,7 +39,7 @@ def doSearch(webURL):
         pagenum = content[-1].split("class=\"bottom-pager\"")[1]
         content[-1] = content[-1].split("<script")[0]
         pagenum = pagenum.split("asc-")[-1]
-        pagenum = pagenum.split(".")[0]
+        pagenum = pagenum.split("\"")[0]
         mystr = "<div class=\"search-item\">";
         data = {"content":mystr.join(content), "pagenum":pagenum, "result":"ok"}
     except Exception, e:
@@ -49,7 +49,7 @@ def doSearch(webURL):
 
 def doGetDetail(url):
     url = url.split("/")[-1]
-    webURL = "http://%s/detail/%s" % (DomainName, url)
+    webURL = "http://%s/%s" % (DomainName, url)
     try:
         response = os.popen("wget -qO- %s" % (webURL))
         result = response.read()
