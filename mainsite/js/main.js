@@ -73,7 +73,7 @@ $(document).ready(function(){
 		location.hash=id;
 
 	};
-	window.onhashchange = function(){
+	var urlhashchange = function(){
 		var hashStr = location.hash;
 		var isValid = false;
 		if (hashStr) {
@@ -92,6 +92,7 @@ $(document).ready(function(){
 			idsToggler(hashStr);
 		}
 	};
+	window.onhashchange = urlhashchange;
 	$("#nav-brand").click(function(){
 		idsToggler("#content-begin");
 	});
@@ -565,4 +566,5 @@ $(document).ready(function(){
         submitHandler : function(form) {
         }
 	});
+	urlhashchange();
 });
