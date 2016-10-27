@@ -69,8 +69,28 @@ $(document).ready(function(){
 		}
 		$(id).css("opacity","0");
 		$(id).css("display","block");
-		$(id).transition({opacity: 1}, 500); 
+		$(id).transition({opacity: 1}, 500);
+		location.hash=id;
 
+	};
+	window.onhashchange = function(){
+		var hashStr = location.hash;
+		var isValid = false;
+		if (hashStr) {
+			for (var i = 0; i < ids.length; i++) {
+			 	if (ids[i] == hashStr) {
+			 		isValid = true;
+			 		break;
+			 	}
+			}
+		} else {
+			isValid = true;
+			hashStr = "#content-begin";
+		}
+
+		if (isValid) {
+			idsToggler(hashStr);
+		}
 	};
 	$("#nav-brand").click(function(){
 		idsToggler("#content-begin");
