@@ -175,6 +175,9 @@ html,body{
 #bt-spinner {
 	display: none;
 }
+#content-begin {
+	display: none;
+}
 #content-bt {
 	display: none;
 }
