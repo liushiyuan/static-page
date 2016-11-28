@@ -388,8 +388,14 @@ html,body{
             height:135px;
 	}
 	.myQRCode {
-		display: none;
+		display: none;S
 	}
+	h3 {
+        font-size: 20px;
+    }
+    h4 {
+        font-size: 15px;
+    }
 }
 @media (min-width: 768px) {
         .my-tile {
