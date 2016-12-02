@@ -14,15 +14,15 @@
 	<script src="https://cdn.bootcss.com/jquery-validate/1.15.0/jquery.validate.min.js"></script>
 	<script src="https://cdn.bootcss.com/jquery.transit/0.9.12/jquery.transit.min.js"></script>
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script src="https://liushiyuan.github.io/static-page/mainsite/js/jqpagination.js"></script>
-	<script src="https://liushiyuan.github.io/static-page/mainsite/js/main.js"></script>
+	<script src="/js/jqpagination.js"></script>
+	<script src="/js/main.js"></script>
 	<link rel="shortcut icon" href="/favicon.ico"/>
 	<link rel="bookmark" href="/favicon.ico"/>
 	<link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 	<link href="https://cdn.bootcss.com/metro/3.0.15/css/metro.min.css" rel="stylesheet">
 	<link href="https://liushiyuan.github.io/static-page/mainsite/css/jqpagination.css" rel="stylesheet">
-	<link href="https://liushiyuan.github.io/static-page/mainsite/css/mainpage.css" rel="stylesheet">
+	<link href="/css/mainpage.css" rel="stylesheet">
 </head>
 <body>
 	<div id="nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -44,6 +44,7 @@
 	    		<li><a id="nav-verycd" href="#" data-toggle="tab"><i class="fa fa-unlock-alt"></i> VeryCD下载</a></li>
 	    		<li><a id="nav-google" href="#" data-toggle="tab"><i class="fa fa-google"></i> Google镜像</a></li>
 	        	<li><a id="nav-bt" href="#" data-toggle="tab"><i class="fa fa-bus"></i> 老司机 BT</a></li>	
+	        	<li><a id="nav-baidupan" href="#" data-toggle="tab"><i class="fa fa-cloud"></i> 搜搜百度云</a></li>	
 	    	</ul>
 	   </div>
 	</div>
@@ -151,6 +152,26 @@
 					        			<tr><td align="center">
 			                            <h4>专门加速的SS代理服务</h4>
 		                            	<h4>最全Shadowsocks代理</h4>
+			                            </td></tr>
+						            </table>
+		                        </div>
+							</div>
+		                </div>
+		            </div>
+			    <div id="tile-baidupan" class="tile-wide fg-white my-tile" data-role="tile">
+		            	<div class="tile-content">
+							<div class="image-container">
+								<div class="frame bg-lightGray">
+									<table width="100%" height="100%">
+				        			<tr><td align="center">
+					                	<h3><i class="fa fa-cloud"></i> 搜搜百度云</h3>
+					                </td></tr>
+					                </table>
+								</div>
+								<div class="image-overlay bg-lighterGray fg-gray">
+									<table width="100%" height="100%">
+					        			<tr><td align="center">
+										<h4>百度网盘资源大全</h4>
 			                            </td></tr>
 						            </table>
 		                        </div>
@@ -620,6 +641,52 @@
 	                <tr>
 	                    <td align="center">
 	                    	<div id="bt-pagination" class="gigantic pagination">
+								<a href="#" class="first" data-action="first">&laquo;</a>
+							    <a href="#" class="previous" data-action="previous">&lsaquo;</a>
+							    <input type="text" readonly="readonly" />
+							    <a href="#" class="next" data-action="next">&rsaquo;</a>
+							    <a href="#" class="last" data-action="last">&raquo;</a>
+							</div>
+						</td>
+					</tr>
+				</table>
+	        </div>
+		</div>
+		<div id="content-baidupan" class="container">
+			<div class="row">
+	      		<div class="well well-sm row-1">
+      				<form role="form" id="form-baidupan" action="">
+		                <div id="search-bar-baidupan" class="form-group">
+		                    <div class="input-group center">
+		                        <input class="form-control" name="link" id="input-baidupan" placeholder="输入关键字" value="" />
+		                        <span class="input-group-btn">
+			                  	<button id="btn-baidupan" type="submit" class="btn btn-primary">搜索</button>
+           						</span>
+		                    </div>
+		                </div>
+		            </form>
+	            </div>
+	      	</div>
+	      	<div class="row"></div>
+	      	<div id="content-baidupan-list" class="row-1">
+
+	        </div>
+	      	<div id="baidupan-spinner"  class="row">
+				<table width="100%" height="100%">
+	                <tr>
+	                    <td align="center">
+							<i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>
+							<span class="sr-only">Loading...</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="row"></div>
+			<div class="row row-1">
+	        	<table id="baidupan-pagination-tb" width="100%" height="100%">
+	                <tr>
+	                    <td align="center">
+	                    	<div id="baidupan-pagination" class="gigantic pagination">
 								<a href="#" class="first" data-action="first">&laquo;</a>
 							    <a href="#" class="previous" data-action="previous">&lsaquo;</a>
 							    <input type="text" readonly="readonly" />

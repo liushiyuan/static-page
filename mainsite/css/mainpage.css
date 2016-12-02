@@ -175,10 +175,16 @@ html,body{
 #bt-spinner {
 	display: none;
 }
+#baidupan-spinner {
+	display: none;
+}
 #content-begin {
 	display: none;
 }
 #content-bt {
+	display: none;
+}
+#content-baidupan {
 	display: none;
 }
 #content-shadowsocks {
@@ -200,6 +206,9 @@ html,body{
 	display: none;
 }
 #bt-pagination-tb {
+	display: none;
+}
+#baidupan-pagination-tb {
 	display: none;
 }
 #movie-404 {
@@ -388,14 +397,14 @@ html,body{
             height:135px;
 	}
 	.myQRCode {
-		display: none;S
+		display: none;
 	}
 	h3 {
-        font-size: 20px;
-    }
-    h4 {
-        font-size: 15px;
-    }
+		font-size: 20px;
+	}
+	h4 {
+		font-size: 15px;
+	}
 }
 @media (min-width: 768px) {
         .my-tile {

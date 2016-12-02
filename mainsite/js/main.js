@@ -62,7 +62,7 @@ $(document).ready(function(){
 			$("#movie-404").css("display","block");
 		}
 	};
-	var ids = ["#content-begin", "#content-movie", "#content-shadowsocks", "#content-verycd", "#content-youtube", "#content-google", "#content-bt"];
+	var ids = ["#content-begin", "#content-movie", "#content-shadowsocks", "#content-verycd", "#content-youtube", "#content-google", "#content-bt", "#content-baidupan"];
 	var idsToggler = function(id){
 		for (var i = 0; i < ids.length; i++) {
 		 	$(ids[i]).css("display","none");
@@ -117,7 +117,10 @@ $(document).ready(function(){
 	});	
 	$("#nav-bt").click(function(){
 		idsToggler("#content-bt");
-	});	
+	});
+	$("#nav-baidupan").click(function(){
+		idsToggler("#content-baidupan");
+	});
 	$("#tile-youtube").click(function(){
 		idsToggler("#content-youtube");
 	});
@@ -136,7 +139,10 @@ $(document).ready(function(){
 	});
 	$("#tile-google").click(function(){
 		idsToggler("#content-google");
-	});	
+	});
+	$("#tile-baidupan").click(function(){
+		idsToggler("#content-baidupan");
+	});
 	$("#btn-youtube").click(function(){
 		if ($("#input-youtube")[0].value) {
 			$("#panel-text").css("display","none");
@@ -446,6 +452,75 @@ $(document).ready(function(){
 	  			});
 		}
 	});
+	var baidupanDomConvertor = function (content) {
+		for (var i = 1; i < content.length; i++) {
+			if (content[i].indexOf("baidu.com") == -1) {
+				content[i] = "";
+				continue;
+			}
+			content[i] = content[i].split("</table>")[0];
+			content[i] = content[i] + "</table>";
+		}
+		content = content.join(" ");
+		var reg = new RegExp("cse-search-result_content_item_table","g");
+		content = content.replace(reg, "search-item");
+		reg = new RegExp("cse-search-result_content_item_top","g");
+		content = content.replace(reg, "item-title");
+		reg = new RegExp("cse-search-result_content_item_mid","g");
+		content = content.replace(reg, "item-list");
+		reg = new RegExp("cse-search-result_content_item_bottom","g");
+		content = content.replace(reg, "item-bar");
+		$("#content-baidupan-list").html(content);
+	};
+	$("#btn-baidupan").click(function(){
+		var value = $("#input-baidupan")[0].value;
+		if (value) {
+			$("#content-baidupan-list").css("display","none");
+			$("#baidupan-pagination-tb").css("display","none");
+			$("#baidupan-spinner").css("display","block");
+			$.post("api/baidupan/post",
+				{
+	  			  	value: value,
+	  			  	type: "search"
+	  			},
+	  			function(data,status){
+	  				var result = eval('(' + data + ')');
+					if (result.result == "ok") {
+							baidupanDomConvertor(result.content);
+					}
+					if ($("#baidupan-pagination").first().data('jqPagination')) {
+						$("#baidupan-pagination").jqPagination('destroy');
+					}
+					$("#baidupan-pagination").jqPagination({
+						link_string	: '',
+						current_page    : 1,
+						max_page	: result.pagenum,
+						paged		: function(page) {
+							$("#content-baidupan-list").css("display","none");
+							$("#baidupan-spinner").css("display","block");
+							$.post("api/baidupan/post",
+								{
+					  			  	value: value,
+					  			  	type: "page",
+					  			  	pagenum: page
+					  			},
+					  			function(data,status){
+					  				var result = eval('(' + data + ')');
+									if (result.result == "ok") {
+											baidupanDomConvertor(result.content);
+									}
+									$("#baidupan-spinner").css("display","none");
+									$("#content-baidupan-list").css("display","block");
+					  			}
+					  		);
+						}
+					});
+					$("#baidupan-spinner").css("display","none");
+					$("#content-baidupan-list").css("display","block");
+					$("#baidupan-pagination-tb").css("display","table");
+	  			});
+		}
+	});
 	$("#form-search-mov").validate({
 		errorClass : 'help-block',
         rules : {
@@ -560,6 +635,30 @@ $(document).ready(function(){
         },
         success : function(label) {
         	$("#search-bar-bt").removeClass('has-error');
+        },
+        errorPlacement : function(error, element) {
+        },
+        submitHandler : function(form) {
+        }
+	});
+	$("#form-baidupan").validate({
+		errorClass : 'help-block',
+        rules : {
+            link : {
+                required : true
+            }
+        },
+        messages : {
+            link : {
+                required : "请输入搜索内容"
+            }
+
+        },
+        highlight : function(element) {
+            $(element).closest('.form-group').addClass('has-error');
+        },
+        success : function(label) {
+        	$("#search-bar-baidupan").removeClass('has-error');
         },
         errorPlacement : function(error, element) {
         },
