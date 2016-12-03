@@ -11,8 +11,8 @@ $(document).ready(function(){
 				reg=new RegExp("<a target=\"_blank\" class=\"a\" href=\"http://","g");
 				newstr=newstr.replace(reg,"<a  data-toggle=\"modal\" data-target=\"#myModal\" href=\"api/movie/tv/");
 			} else {
-				reg=new RegExp("src=\"","g");
-				newstr=newstr.replace(reg,"src=\"http://www.rs05.com/");
+				reg=new RegExp("src=\"images","g");
+				newstr=newstr.replace(reg,"src=\"http://img.xinxianplus.com");
 				reg=new RegExp("<a target=\"_blank\" href=\"","g");
 				newstr=newstr.replace(reg,"<a  data-toggle=\"modal\" data-target=\"#myModal\" href=\"api/movie/id/");
 				reg=new RegExp("<a class=\"pic fl\" href=\"","g");
