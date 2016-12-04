@@ -13,7 +13,7 @@ $(document).ready(function(){
 			} else {
 				reg=new RegExp("src=\"images","g");
 				newstr=newstr.replace(reg,"src=\"http://img.xinxianplus.com");
-				reg=new RegExp("<a target=\"_blank\" href=\"","g");
+				reg=new RegExp("<a target=\"_blank\" href=\"http://www.rs05.com/","g");
 				newstr=newstr.replace(reg,"<a  data-toggle=\"modal\" data-target=\"#myModal\" href=\"api/movie/id/");
 				reg=new RegExp("<a class=\"pic fl\" href=\"","g");
 				newstr=newstr.replace(reg,"<a  data-toggle=\"modal\" data-target=\"#myModal\" class=\"pic fl\" href=\"api/movie/id/");
