@@ -488,37 +488,25 @@ html,body{
 	margin-left: 10px;
 	display: none;
 }
-.search-item
-{
-  margin: 0px 0px 25px 0px;
+.mlist {
+	list-style: none;
+	padding: 0px;
 }
-.search-item .item-title
-{
-  font-size: medium;
-  line-height: 1.2;
+.mlist li {
+	margin: 0px 0px 25px 0px;
 }
-.search-item .item-list
-{
-  color: #545454;
-  line-height: 1.4;
-  font-size: 13px;
-  word-wrap: break-word;
+.mlist li .T1{
+	font-size: medium;
+  	line-height: 1.2;
 }
-.search-item .item-list p
-{
-	margin-bottom: 0px;
+.mlist li .BotInfo{
+  	color: #545454;
+ 	line-height: 1.4;
+	font-size: 13px;
+	word-wrap: break-word;
 }
-.search-item .item-bar
-{
-  color: #00802a;
-  font-size: 13px;
-  line-height: 16px;
-}
-.search-item .item-bar span
-{
-  margin-right: 10px;
-}
-.search-item .item-bar .download
-{
-  margin-right: 10px;
+.mlist li .BotInfo dt{
+  	color: #00802a;
+  	font-size: 13px;
+  	line-height: 16px;
 }
