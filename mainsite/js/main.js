@@ -383,7 +383,7 @@ $(document).ready(function(){
 	var btDomConvertor = function (content) {
 		var reg = new RegExp("href","g");
 		content = content.replace(reg,"class=\"bt_a\" href");
-		$("#content-bt-list").html("<table id=\"content-bt-table\">" + content + "</table>");
+		$("#content-bt-list").html(content);
 		$("a[class='bt_a']").click(function(event){
 			event.preventDefault();
 			$('#myModal').modal('toggle');
